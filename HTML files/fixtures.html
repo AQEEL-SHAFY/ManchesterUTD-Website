@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" type="logo" href="../images/manutd.png">
+  <title>Fixtures | Manchester Utd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-image: url("../images/wal.JPEG");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+    }
+
+    nav {
+      height: 80px;
+      width: 100%;
+      position: fixed;
+     
+    }
+
+    label.logo {
+      color: red;
+      font-size: 35px;
+      line-height: 80px;
+      padding: 0 50px;
+      font-weight: bold;
+    }
+
+    label.logo span {
+      color: #fff;
+      font-weight: bold;
+    }
+
+    nav ul {
+      float: right;
+      margin-right: 20px;
+    }
+
+    nav ul li {
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 5px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      font-size: 20px;
+      padding: 7px 13px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    a.active,
+    a:hover {
+      color: red;
+      transition: .5s;
+    }
+
+    .checkbtn {
+      font-size: 30px;
+      color: white;
+      float: right;
+      line-height: 80px;
+      margin-right: 40px;
+      cursor: pointer;
+      display: none;
+    }
+
+    #check {
+      display: none;
+    }
+
+    @media (max-width: 952px) {
+      label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+      }
+
+      nav ul li a {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+
+    @media (max-width: 858px) {
+      .checkbtn {
+        display: block;
+      }
+
+      ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #023b7556;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+      }
+
+      nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+      }
+
+      nav ul li a {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      a.active,
+      a:hover {
+        background: none;
+        color: red;
+      }
+
+      #check:checked~ul {
+        left: 0;
+      }
+    }
+
+    .match {
+      text-decoration: underline;
+      padding-top: 25px;
+      padding-left: 10px;
+      margin-left: 20px;
+      border: .2rem inset gold;
+      margin-right: 20px;
+      padding-bottom: 15px;
+      border-radius: 15px;
+
+    }
+
+    .match img {
+      height: 50px;
+      width: 50px;
+    }
+
+    .match h1 {
+      position: absolute;
+      margin-top: 5px;
+      display: inline;
+      color: #fff;
+
+    }
+
+    .match p {
+      position: absolute;
+      min-width: auto;
+      padding-left: 180px;
+      color: #fff;
+      margin-top: 5px;
+      display: inline;
+      font-size: 30px;
+      font-weight: bold;
+
+    }
+
+    .tick {
+      position: absolute;
+      padding-right: 0px;
+      margin-left: 360px;
+      font-weight: bold;
+      font-size: 25px;
+      padding: .2rem 1rem;
+      border: .1rem solid #fff;
+      background: rgb(190, 5, 5);
+      color: #fff;
+      cursor: pointer;
+
+    }
+    .tick a{
+      color: #fff;
+    }
+    .tick a:hover{
+      color: rgb(190, 5, 5);
+    }
+    .tick:hover{
+      color: rgb(190, 5, 5);
+      border: .1rem solid rgb(190, 5, 5);
+      background-color: #fff;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-image: url("../images/backl.jpg");
+  
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+  padding: 30px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: black;
+  height: 3px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.footer-col ul li a {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fa fa-bars"></i>
+    </label>
+    <label class="logo">MAN-<span>UTD</span></label>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="players.html">Players</a></li>
+      <li><a class="active" href="fixtures.html">fixtures</a></li>
+      <li><a href="ticket.html">Tickets</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="history.html">About</a></li>
+    </ul>
+  </nav>
+
+
+  <h3 style=" color: rgb(190, 5, 5);  text-decoration: underline; padding-left: 20px;padding-top: 100px;">JULY 2021</h3><br>
+
+  <div class="match">
+    <img src="../images/fb.webp" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">24 JUL - 21.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/QOUce0WQBYqnkSmN6_TxGA_48x48.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Brentford</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/fb.webp" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">30 JUL - 22.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/Qpr.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>QPR</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <h3 style=" text-decoration: underline; color: rgb(190, 5, 5); padding-left: 20px;padding-top: 60px;">AUGUST 2021</h3><br>
+  <div class="match">
+    <img src="../images/fb.webp" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">07 AUG - 21.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/Everton.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Evorton</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">14 AUG - 22.00pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/Leeds.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Leed-Utd</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">22 AUG - 20.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/southampton.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Southampton</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">29 AUG - 21.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/wolves.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Wolves</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <h3 style=" text-decoration: underline; color: rgb(190, 5, 5); padding-left: 20px;padding-top: 60px;">SEPTEMBER 2021</h3><br>
+  
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">11 SEP - 19.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/newcastle.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Newcastle</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+  
+  <div class="match">
+    <img src="../images/UEFA_Champions_League-Logo.wine.png" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">14 SEP - 22.15pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/yboys.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Young Boys</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">19 SEP - 18.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/westham.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>West Ham</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/EFl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">21 SEP - TBD |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/westham.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>West Ham</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+  
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">25 SEP - 19.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/villa.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Aston Villa</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/UEFA_Champions_League-Logo.wine.png" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">30 SEP - 00.30am |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/villareal.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Villareal</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <h3 style=" text-decoration: underline; color: rgb(190, 5, 5); padding-left: 20px;padding-top: 60px;">OCTOMBER 2021</h3><br>
+  
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">02 OCT - 17.00pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/Everton.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Everton</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">16 OCT - 19.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/leicester.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Leicester City</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/UEFA_Champions_League-Logo.wine.png" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">21 OCT - 00.30am |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/atalanta.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Atalanta</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">24 OCT - 21.00pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/liverpool.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Liverpool</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">30 OCT - 22.00pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/tottenham.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Tottenham</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <h3 style=" text-decoration: underline; color: rgb(190, 5, 5); padding-left: 20px;padding-top: 60px;">NOVEMBER 2021</h3><br>
+  
+
+  <div class="match">
+    <img src="../images/UEFA_Champions_League-Logo.wine.png" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">03 NOV - 01.30am |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/atalanta.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Atalanta</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">06 NOV - 20.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/Mancity'.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Man City</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">20 NOV - 20.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/watford.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Watford</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/UEFA_Champions_League-Logo.wine.png" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">23 NOV - 23.15pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/villareal.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Villareal</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">27 NOV - 20.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/chelsea.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Chelsea</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+  
+  <h3 style=" text-decoration: underline; color: rgb(190, 5, 5); padding-left: 20px;padding-top: 60px;">DECEMBER 2021</h3><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">01 DEC - 01.30am |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/arsenal.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Arsenal</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">04 DEC - 20.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/cp.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Cristal Palace</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/UEFA_Champions_League-Logo.wine.png" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">09 DEC - 01.30am |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/yboys.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Young Boys</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">11 DEC - 20.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/norwich.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Norwich City</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">15 DEC - 01.15am |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/brentford.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Brentford</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">18 DEC - 20.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/brighton.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Brighton</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">26 DEC - 20.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/newcastle.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Newcastle</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">28 DEC - 20.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/burnley.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Burnley</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <h3 style=" text-decoration: underline; color:rgb(190, 5, 5); padding-left: 20px;padding-top: 60px;">JANUARY 2021</h3><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">01 JAN - 20.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/wolves.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Wolves </h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">15 JAN - 20.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/villa.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>Aston Villa</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br>
+
+  <div class="match">
+    <img src="../images/pl.jpg" style=" margin-left: 80px; ">
+    <p style="padding: 10px; font-size: 20px;">22 JAN - 20.30pm |</p>
+    <img src="../images/manutd.png" style=" margin-left: 350px;margin-right: 10px; ">
+    <h1>Man-Utd</h1>
+    <p>vs</p>
+    <img src="../images/westham.png" style="margin-left: 280px;margin-right: 10px;">
+    <h1>West Ham</h1>
+    <button class="tick"><a href="ticket.html">TICKETS</a></button>
+  </div><br><br><br><br>
+
+
+  <footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col">
+					<h4>Sites</h4>
+					<ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="players.html">Players</a></li>
+            <li><a class="active" href="fixtures.html">fixtures</a></li>
+            <li><a href="ticket.html">Tickets</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="history.html">About</a></li>
+          </ul>
+				</div>
+				<img style="margin-top: 30px; margin-left: 180px; margin-right: 200px;"  src="../images/logo.jpg" width="200px" height="200px">
+				<div class="footer-col">
+					<h4>follow us</h4>
+					<div class="social-links">
+						<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+						<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+						<a href="https://lk.linkedin.com/"><i class="fab fa-linkedin-in"></i></a><br>
+            <a href="https://www.facebook.com/"><i class="fab fa-youtube"></i></a>
+						<a href="https://www.twitter.com/"><i class="fab fa-snapchat"></i></a>
+						<a href="https://www.instagram.com/"><i class="fab fa-twitch"></i></a>
+						<a href="https://lk.linkedin.com/"><i class="fab fa-tiktok"></i></a><br>
+            <a href="https://www.facebook.com/"><i class="fab fa-skype"></i></a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<p style="margin-left: 610px; color: #fff; margin-top: 10px;">Copyright : 2021 Manchester United F.C</p>
+	</footer>
+
+
+</body>
+
+</html>

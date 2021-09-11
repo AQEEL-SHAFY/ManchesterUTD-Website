@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="logo" href="../images/manutd.png">
+    <title>Players | Manchester Utd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../images/wal.JPEG");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+nav{
+  height: 80px;
+  width: 100%;
+  position: fixed;
+}
+label.logo{
+  color: red;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 50px;
+  font-weight: bold;
+}
+label.logo span{
+  color: #fff;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #fff;
+  font-size: 20px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+a.active,a:hover {
+  color: red;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #023b7556;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  a.active,
+            a:hover {
+                background: none;
+                color: red;
+            }
+
+            #check:checked~ul {
+                left: 0;
+            }
+        
+}
+.shop .box-border{
+  display:flex;
+  align-items: center;
+  flex-wrap:wrap;
+  width: 90%;
+  margin:  auto;
+  padding-top: 100px;
+  justify-content: center;
+  
+}
+.shop .box-border .box{
+  flex:   2rem;
+  border: .2rem solid gold;
+ 
+  border-radius: 16px;
+  margin: 2rem 2rem;
+  
+}
+.shop .box-border .box .image{
+  height: 18rem;
+  text-align: center;
+ 
+
+}  
+.shop .box-border .box .image img{
+  padding-top:30px ;
+  width: 250px;
+  object-fit: contain;
+
+}
+.image img {
+  transition:  2s ;
+}
+.image:hover img {
+  transform: scale(1.5);
+}
+
+.price{
+  margin-top: -30px;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.price p{
+  padding-bottom: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-image: url("../images/backl.jpg");
+  
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+  padding: 30px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: black;
+  height: 3px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.footer-col ul li a {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+   </style>
+      </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <label class="logo">MAN-<span>UTD</span></label>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a class="active" href="players.html">Players</a></li>
+        <li><a href="fixtures.html">fixtures</a></li>
+        <li><a href="ticket.html">Tickets</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="history.html">About</a></li>
+      </ul>
+    </nav>
+
+    <section class="shop" id="shop">
+
+    <div class="box-border">
+
+      <div class="box">
+       
+        <div class="image">
+          <img src="../images/ronaldo.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Cristiano Ronaldo <br>
+            <img src="../images/portugal.png" height="30px">
+            <br>-Forward-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+       
+        <div class="image">
+          <img src="../images/sancho.jpg"  alt="">
+        </div>
+        <div class="price">
+          <p>Jadon Sancho <br>
+            <img src="../images/england.png" height="30px">
+            <br>-Midfielder-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+       
+        <div class="image">
+          <img src="../images/pogba.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Paul Pogba <br>
+             <img src="../images/france.png" height="30px">
+            <br>-Midfielder-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+              <div class="image">
+          <img src="../images/cavani.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Edinson Cavani <br>
+            <img src="../images/uruguay.png" height="30px">
+            <br>-Forward-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/varane.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Raphael Varane <br>
+            <img src="../images/france.png" height="30px">
+            <br>-Defender-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/fernandes.jpeg" alt="">
+        </div>
+        <div class="price">
+          <p>Bruno Fernandes <br>
+            <img src="../images/portugal.png" height="30px">
+            <br>-Midfielder-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/martial.jpg_fit=scale" alt="">
+        </div>
+        <div class="price">
+          <p>Anthony Martial <br>
+            <img src="../images/france.png" height="30px">
+            <br>-Forward-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/rashford.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Marcus Rashford<br>
+            <img src="../images/england.png" height="30px">
+            <br>-Forward-</p>
+        </div>
+        
+      </div>
+      
+      <div class="box">
+       
+        <div class="image">
+          <img src="../images/lingard.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Jesse Lingard<br>
+            <img src="../images/england.png" height="30px">
+            <br>-Midfielder-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+       
+        <div class="image">
+          <img src="../images/greenwood.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Mason Greenwood<br>
+            <img src="../images/england.png" height="30px">
+            <br>-Forward-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+       
+        <div class="image">
+          <img src="../images/degea.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>David de Gea<br>
+            <img src="../images/spain.png" height="30px">
+            <br>-Goalkeeper-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+              <div class="image">
+          <img src="../images/diallo.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Amad Diallo<br>
+            <img src="../images/ivory-coast.png" height="30px">
+            <br>-Forward-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/maguire.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Harry Maguire<br>
+            <img src="../images/england.png" height="30px">
+            <br>-Defender-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/beek.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Donny van de Beek<br>
+            <img src="../images/netherlands.png" height="30px">
+            <br>-Midfielder-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/elanga.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Anthony Elanga<br>
+            <img src="../images/sweden.png" height="30px">
+            <br>-Forward-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/shaw.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Luke Shaw<br>
+            <img src="../images/england.png" height="30px">
+            <br>-Defender-</p>
+        </div>
+        
+      </div>
+      
+      <div class="box">
+       
+        <div class="image">
+          <img src="../images/mata.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Juan Mata<br>
+            <img src="../images/spain.png" height="30px">
+            <br>-Midfielder-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+       
+        <div class="image">
+          <img src="../images/shola.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Shola Shoretire<br>
+            <img src="../images/england.png" height="30px">
+            <br>-Midfielder-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+       
+        <div class="image">
+          <img src="../images/jones.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Phil Jones<br>
+            <img src="../images/england.png" height="30px">
+            <br>-Defender-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+              <div class="image">
+          <img src="../images/fred.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Fred<br>
+            <img src="../images/brazil.png" height="30px">
+            <br>-Midfielder-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/Lee grant.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Lee grant<br>
+            <img src="../images/england.png" height="30px">
+            <br>-Goalkeeper-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/henderson.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Dean Henderson<br>
+            <img src="../images/england.png" height="30px">
+            <br>-Goalkeeper-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/dalot.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Diogo Dalot<br> 
+            <img src="../images/portugal.png" height="30px">
+            <br>-Defender-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/mejbri.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Hannibal Mejbri<br>
+            <img src="../images/tunisia.png" height="30px">
+            <br>-Midfielder-</p>
+        </div>
+        
+      </div>
+      
+      <div class="box">
+       
+        <div class="image">
+          <img src="../images/aaron.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Aaron Wan-Bissaka<br>
+            <img src="../images/england.png" height="30px">
+            <br>-Defender-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+       
+        <div class="image">
+          <img src="../images/victor.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Victor Lindelof<br>
+            <img src="../images/sweden.png" height="30px">
+            <br>-Defender-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+       
+        <div class="image">
+          <img src="../images/tominay.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Scott McTominay<br>
+            <img src="../images/scotland.png" height="30px">
+            <br>-Midfielder-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+              <div class="image">
+          <img src="../images/telles.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Alex Telles<br>
+            <img src="../images/brazil.png" height="30px">
+            <br>-Defender-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/heaton.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Tom Healton<br>
+            <img src="../images/england.png" height="30px">
+            <br>-Goalkeeper-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/matic.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Nemanja Matic<br>
+            <img src="../images/england.png" height="30px">
+            <br>-Midfielder-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/bailly.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Eric Bailly<br>
+            <img src="../images/england.png" height="30px">
+            <br>-Defender-</p>
+        </div>
+        
+      </div>
+      <div class="box">
+        
+        <div class="image">
+          <img src="../images/mengi.jpg" alt="">
+        </div>
+        <div class="price">
+          <p>Teden Menji<br>
+            <img src="../images/images/Flags/images/" height="30px">
+            <br>-Defender-</p>
+        </div>
+        
+      </div>
+      
+   
+      
+    </div>
+
+    </section>
+    
+  <footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col">
+					<h4>Sites</h4>
+					<ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a class="active" href="players.html">Players</a></li>
+            <li><a href="fixtures.html">fixtures</a></li>
+            <li><a href="ticket.html">Tickets</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="history.html">About</a></li>
+          </ul>
+				</div>
+				<img style="margin-top: 30px; margin-left: 180px; margin-right: 200px;"  src="../images/logo.jpg" width="200px" height="200px">
+				<div class="footer-col">
+					<h4>follow us</h4>
+					<div class="social-links">
+						<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+						<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+						<a href="https://lk.linkedin.com/"><i class="fab fa-linkedin-in"></i></a><br>
+            <a href="https://www.facebook.com/"><i class="fab fa-youtube"></i></a>
+						<a href="https://www.twitter.com/"><i class="fab fa-snapchat"></i></a>
+						<a href="https://www.instagram.com/"><i class="fab fa-twitch"></i></a>
+						<a href="https://lk.linkedin.com/"><i class="fab fa-tiktok"></i></a><br>
+            <a href="https://www.facebook.com/"><i class="fab fa-skype"></i></a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<p style="margin-left: 610px; color: #fff; margin-top: 10px;">Copyright : 2021 Manchester United F.C</p>
+	</footer>
+    </body>
+    </html>

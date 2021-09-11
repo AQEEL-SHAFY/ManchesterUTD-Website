@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="logo" href="../images/manutd.png">
+    <title>Gallery | Manchester Utd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../images/wal.JPEG");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+nav{
+ 
+  height: 80px;
+  width: 100%;
+  position: fixed;
+}
+label.logo{
+  color: red;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 50px;
+  font-weight: bold;
+}
+label.logo span{
+  color: #fff;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #fff;
+  font-size: 20px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+a.active,a:hover {
+  color: red;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #023b7556;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  a.active,a:hover{
+    background: none;
+    color: red;;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+.gallery p{
+  font-size: 20px;
+  color: #fff;
+
+}
+.gallery img{
+  padding-top: 80px;
+  margin: 2rem 2rem;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-image: url("../images/backl.jpg");
+  
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+  padding: 18px 0;
+  margin-top: 100px;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: black;
+  height: 3px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.footer-col ul li a {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+   </style>
+      </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <label class="logo">MAN-<span>UTD</span></label>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="players.html">Players</a></li>
+        <li><a href="fixtures.html">fixtures</a></li>
+        <li><a href="ticket.html">Tickets</a></li>
+        <li><a class="active" href="gallery.html">Gallery</a></li>
+        <li><a href="history.html">About</a></li>
+      </ul>
+    </nav>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/logo.jpg" style="padding-left: 400px;" height="600px" width="1000px" alt="">
+      <p style="  margin-left: 620px; ;">Manchester United Logo</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/kit1.webp" style="padding-left: 400px;" height="600px" width="1000px" alt="">
+        <p style="  margin-left: 650px;">Home Kit (2021-2022)</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/kit2.jpg" style="padding-left: 400px;" height="600px" width="1000px" alt="">
+        <p style="  margin-left: 650px;">Away Shirt (2021-2022)</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/kit3.webp" style="padding-left: 400px;" height="600px" width="1000px" alt="">
+        <p style="  margin-left: 650px;">Third Kit (2021-2022)</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/oldtrafford.jpg" style="padding-left: 150px;" height="700px" width="1300px" alt="">
+        <p style="  margin-left: 590px;">Old Trafford Football Stadium Top View</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/stadium.jpg" style="padding-left: 250px;" height="700px" width="1200px" alt="">
+        <p style="  margin-left: 550px; margin-right: 500px;">Old Trafford Football Stadium Inside View</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/goalbar.jpg" style="padding-left: 150px;" height="700px" width="1300px" alt="">
+        <p style="  margin-left: 550px; margin-right: 500px;">Old Trafford Football Stadium Goalbar View</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/st.jpg" style="padding-left: 250px;" height="700px" width="1200px" alt="">
+        <p style="  margin-left: 580px; ">Old Trafford Football Stadium Entrance </p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/coach.jpg" style="padding-left: 250px;" height="600px" width="1200px" alt="">
+        <p style="  margin-left: 520px; ">Manchester United Manager (Ole Gunnar Solskjær)</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/owner.jpg" style="padding-left: 280px;" height="600px" width="1200px" alt="">
+        <p style="  margin-left: 550px; ">Manchester United Owner (Glazer siblings)</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/train.jpg" style="padding-left: 100px;" height="700px" width="1400px" alt="">
+        <p style="  margin-left: 650px; ">Manchester United Training</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/train1.jpg" style="padding-left: 280px;" height="700px" width="1200px" alt="">
+        <p style="  margin-left: 650px; ">Manchester United Training</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/train2.jpg" style="padding-left: 380px;" height="700px" width="1100px" alt="">
+        <p style="  margin-left: 650px; ">Manchester United Training</p>
+    </div>
+
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/train3.jpg" style="padding-left: 280px;" height="700px" width="1200px" alt="">
+        <p style="  margin-left: 650px; ">Manchester United Training</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/train4.jpg" style="padding-left: 80px;" height="700px" width="1400px" alt="">
+        <p style="  margin-left: 640px; ">Manchester United Training</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/train5.jpg" style="padding-left: 280px;" height="700px" width="1200px" alt="">
+        <p style="  margin-left: 650px; ">Manchester United Training</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/save.jpg" style="padding-left: 100px;" height="700px" width="1400px" alt="">
+        <p style="  margin-left: 650px; ">Manchester United saves</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/save2.jpg" style="padding-left: 280px;" height="700px" width="1200px" alt="">
+        <p style="  margin-left: 650px; ">Manchester United saves</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/goal.webp" style="padding-left: 280px;" height="700px" width="1200px" alt="">
+        <p style="  margin-left: 700px; ">Goal Celebrating</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/goal2.jpg" style="padding-left: 280px;" height="700px" width="1200px" alt="">
+        <p style="  margin-left: 700px; ">Goal Celebrating</p>
+    </div>
+    <div class="gallery">
+      <div class="gal">
+        <img src="../images/trophy.jpg" style="padding-left: 100px;" height="700px" width="1400px" alt="">
+        <p style="  margin-left: 600px; padding-bottom: 100px;">Manchester United Trophy Cabinet</p>
+    </div>
+    
+  <footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col">
+					<h4>Sites</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="players.html">Players</a></li>
+            <li><a href="fixtures.html">fixtures</a></li>
+            <li><a href="ticket.html">Tickets</a></li>
+            <li><a class="active" href="gallery.html">Gallery</a></li>
+            <li><a href="history.html">About</a></li>
+          </ul>
+				</div>
+				<img style="margin-top: -15px; margin-left: 170px; margin-right: 120px;"  src="../images/logo.jpg" width="250px" height="300px">
+				<div class="footer-col">
+					<h4>follow us</h4>
+					<div class="social-links">
+						<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+						<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+						<a href="https://lk.linkedin.com/"><i class="fab fa-linkedin-in"></i></a><br>
+            <a href="https://www.facebook.com/"><i class="fab fa-youtube"></i></a>
+						<a href="https://www.twitter.com/"><i class="fab fa-snapchat"></i></a>
+						<a href="https://www.instagram.com/"><i class="fab fa-twitch"></i></a>
+						<a href="https://lk.linkedin.com/"><i class="fab fa-tiktok"></i></a><br>
+            <a href="https://www.facebook.com/"><i class="fab fa-skype"></i></a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<p style="margin-left: 600px; color: #fff; margin-top: 10px;">Copyright : 2021 Manchester United F.C</p>
+	</footer>
+
+      </body>
+    </html>

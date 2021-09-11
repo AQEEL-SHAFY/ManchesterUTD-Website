@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="logo" href="../images/manutd.png">
+    <title>About | Manchester Utd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("../images/wal.JPEG");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+        }
+
+
+        nav {
+            height: 80px;
+            width: 100%;
+            position: fixed;
+
+        }
+
+        label.logo {
+            color: red;
+            font-size: 35px;
+            line-height: 80px;
+            padding: 0 50px;
+            font-weight: bold;
+        }
+
+        label.logo span {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-size: 20px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        a.active,
+        a:hover {
+            color: red;
+            transition: .5s;
+        }
+
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        @media (max-width: 952px) {
+            label.logo {
+                font-size: 30px;
+                padding-left: 50px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+
+        @media (max-width: 858px) {
+            .checkbtn {
+                display: block;
+            }
+
+            ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #023b7556;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            nav ul li a {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            a.active,
+            a:hover {
+                background: none;
+                color: red;
+            }
+
+            #check:checked~ul {
+                left: 0;
+            }
+        }
+
+
+
+        .form {
+            top: 100px;
+            margin-left: 18px;
+            color: black;
+            font-weight: bolder;
+            width: 1480px;
+            padding: 15px;
+            background-color: rgba(219, 199, 199, 0.541);
+            border-radius: 8px;
+            height: 3350px;
+            font-size: 15px;
+             
+        }
+
+        .form h2 {
+            text-decoration: underline;
+            padding-bottom: 8px;
+            color: rgb(68, 5, 5);
+            
+        }
+
+        .left {
+            float: left;
+            padding-right: 20px;
+            padding-top: 10px;
+        }
+
+        .right {
+            float: right;
+
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-image: url("../images/backl.jpg");
+  
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+  padding: 30px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: black;
+  height: 3px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.footer-col ul li a {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+.imageLogo{
+    margin-top: 30px; 
+    margin-left: 180px; 
+    margin-right: 200px;
+}
+.copiright{
+    margin-left: 610px; 
+    color: #fff; 
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    
+    .form{
+        width: 93%;
+        height: 10060px;
+    }
+    .footer {
+        width: 100%;
+    }
+    .footer-col {
+  width: 2%;
+  padding: 5px;
+}
+
+.footer-col ul li a {
+
+    width: 92%;
+}
+}
+ 
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label class="logo">MAN-<span>UTD</span></label>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="players.html">Players</a></li>
+            <li><a href="fixtures.html">fixtures</a></li>
+            <li><a href="ticket.html">Tickets</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a class="active" href="history.html">About</a></li>
+          </ul>
+    </nav>
+   
+    <div class="dd" style="padding-bottom: 10px;">
+    </div>
+
+    <div class="form" style="margin-top: 100px;">
+
+        <h2 >Early Years</h2><br>
+        <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            Manchester United was formed in 1878 as Newton Heath LYR Football Club by the Carriage and Wagon department
+            of the Lancashire and Yorkshire Railway (LYR) depot at Newton Heath.The team initially played games
+            against other departments and railway companies, but on 20 November 1880, they competed in their first
+            recorded match; wearing the colours of the railway company – green and gold – they were defeated 6–0 by
+            Bolton Wanderers' reserve team.By 1888, the club had become a founding member of The Combination, a
+            regional football league. Following the league's dissolution after only one season, Newton Heath joined the
+            newly formed Football Alliance, which ran for three seasons before being merged with The Football League.
+            This resulted in the club starting the 1892–93 season in the First Division, by which time it had become
+            independent of the railway company and dropped the "LYR" from its name.After two seasons, the club was
+            relegated to the Second Division.
+            <img src="../images/old.jpg" alt="Apple" class="right" />
+            In January 1902, with debts of £2,670 – equivalent to £290,000 in 2021[nb 1] – the club was served with a
+            winding-up order.Captain Harry Stafford found four local businessmen, including John Henry Davies (who
+            became club president), each willing to invest £500 in return for a direct interest in running the club and
+            who subsequently changed the name;on 24 April 1902, Manchester United was officially born.[nb 2]
+            Under Ernest Mangnall, who assumed managerial duties in 1903, the team finished as Second Division
+            runners-up in 1906 and secured promotion to the First Division, which they won in 1908 – the club's first
+            league title. The following season began with victory in the first ever Charity Shield and ended with
+            the club's first FA Cup title. Manchester United won the First Division for the second time in 1911, but at
+            the end of the following season, Mangnall left the club to join Manchester City.
+            <img src="../images/oldtr.jpg" alt="Apple" class="left" />
+            In 1922, three years after the resumption of football following the First World War, the club was relegated
+            to the Second Division, where it remained until regaining promotion in 1925. Relegated again in 1931,
+            Manchester United became a yo-yo club, achieving its all-time lowest position of 20th place in the Second
+            Division in 1934. Following the death of principal benefactor John Henry Davies in October 1927, the club's
+            finances deteriorated to the extent that Manchester United would likely have gone bankrupt had it not been
+            for James W. Gibson, who, in December 1931, invested £2,000 and assumed control of the club.In the
+            1938–39 season, the last year of football before the Second World War, the club finished 14th in the First
+            Division.
+        </p><br><br>
+        <h2>Busby years (1945–1969)</h2><br>
+        <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            In October 1945, the impending resumption of football led to the managerial appointment of Matt Busby, who
+            demanded an unprecedented level of control over team selection, player transfers and training sessions.
+            Busby led the team to second-place league finishes in 1947, 1948 and 1949, and to FA Cup victory in 1948. In
+            1952, the club won the First Division, its first league title for 41 years.They then won back-to-back
+            league titles in 1956 and 1957; the squad, who had an average age of 22, were nicknamed "the Busby Babes" by
+            the media, a testament to Busby's faith in his youth players.In 1957, Manchester United became the
+            first English team to compete in the European Cup, despite objections from The Football League, who had
+            denied Chelsea the same opportunity the previous season.En route to the semi-final, which they lost to
+            Real Madrid, the team recorded a 10–0 victory over Belgian champions Anderlecht, which remains the club's
+            biggest victory on record.
+            <img src="../images/busby.jpg" alt="Apple" class="left" />
+            The following season, on the way home from a European Cup quarter-final victory against Red Star Belgrade,
+            the aircraft carrying the Manchester United players, officials and journalists crashed while attempting to
+            take off after refuelling in Munich, Germany. The Munich air disaster of 6 February 1958 claimed 23 lives,
+            including those of eight players – Geoff Bent, Roger Byrne, Eddie Colman, Duncan Edwards, Mark Jones, David
+            Pegg, Tommy Taylor and Billy Whelan – and injured several more.
+            <img src="../images/WillemIIManchesterUnited1963c.jpg" alt="Apple" class="right" />
+            Assistant manager Jimmy Murphy took over as manager while Busby recovered from his injuries and the club's
+            makeshift side reached the FA Cup final, which they lost to Bolton Wanderers. In recognition of the team's
+            tragedy, UEFA invited the club to compete in the 1958–59 European Cup alongside eventual League champions
+            Wolverhampton Wanderers. Despite approval from The Football Association, The Football League determined that
+            the club should not enter the competition, since it had not qualified.
+      
+            Busby rebuilt the team through the 1960s by signing players such as Denis Law and Pat Crerand, who combined with the next
+            generation of youth players – including George Best – to win the FA Cup in 1963. The following season, they
+            finished second in the league, then won the title in 1965 and 1967. In 1968, Manchester United became the
+            first English (and second British) club to win the European Cup, beating Benfica 4–1 in the final with a
+            team that contained three European Footballers of the Year: Bobby Charlton, Denis Law and George Best.
+            They then represented Europe in the 1968 Intercontinental Cup against Estudiantes of Argentina, but lost the
+            tie after losing the first leg in Buenos Aires, before a 1–1 draw at Old Trafford three weeks later. Busby
+            resigned as manager in 1969 before being replaced by the reserve team coach, former Manchester United player
+            Wilf McGuinness.
+        </p><br>
+
+        <h2>1969–1986</h2><br>
+
+        <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            Following an eighth-place finish in the 1969–70 season and a poor start to the 1970–71 season, Busby was
+            persuaded to temporarily resume managerial duties, and McGuinness returned to his position as reserve team
+            coach. In June 1971, Frank O'Farrell was appointed as manager, but lasted less than 18 months before being
+            replaced by Tommy Docherty in December 1972.Docherty saved Manchester United from relegation that
+            season, only to see them relegated in 1974; by that time the trio of Best, Law, and Charlton had left the
+            club.The team won promotion at the first attempt and reached the FA Cup final in 1976, but were beaten
+            by Southampton. They reached the final again in 1977, beating Liverpool 2–1. Docherty was dismissed shortly
+            afterwards, following the revelation of his affair with the club physiotherapist's wife.
+            <img src="../images/170px-Bryan_Robson_at_the_cliff_-march_92.jpg" alt="Apple" class="right" />
+            Dave Sexton replaced Docherty as manager in the summer of 1977. Despite major signings, including Joe
+            Jordan, Gordon McQueen, Gary Bailey, and Ray Wilkins, the team failed to win any trophies; they finished
+            second in 1979–80 and lost to Arsenal in the 1979 FA Cup Final. Sexton was dismissed in 1981, even though
+            the team won the last seven games under his direction.He was replaced by Ron Atkinson, who immediately
+            broke the British record transfer fee to sign Bryan Robson from his former club West Bromwich Albion. Under
+            Atkinson, Manchester United won the FA Cup in 1983 and 1985 and beat rivals Liverpool to win the 1983
+            Charity Shield. In 1985–86, after 13 wins and two draws in its first 15 matches, the club was favourite to
+            win the league but finished in fourth place. The following season, with the club in danger of relegation by
+            November, Atkinson was dismissed.
+        </p><br>
+
+        <h2>Ferguson years (1986–2013)</h2><br>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            Alex Ferguson and his assistant Archie Knox arrived from Aberdeen on the day of Atkinson's dismissal,
+            and guided the club to an 11th-place finish in the league.Despite a second-place finish in 1987–88, the
+            club was back in 11th place the following season.Reportedly on the verge of being dismissed, victory
+            over Crystal Palace in the 1990 FA Cup Final replay (after a 3–3 draw) saved Ferguson's career.The
+            following season, Manchester United claimed their first UEFA Cup Winners' Cup title. That triumph allowed
+            the club to compete in the European Super Cup for the very first time, where United beat European Cup
+            holders Red Star Belgrade 1–0 in the final at Old Trafford. A second consecutive League Cup final appearance
+            in 1992 saw the club win that competition for the first time as well, following a 1–0 win against Nottingham
+            Forest at Wembley Stadium.In 1993, the club won its first league title since 1967, and a year later,
+            for the first time since 1957, it won a second consecutive title – alongside the FA Cup – to complete the
+            first "Double" in the club's history.United then became the first English club to do the Double twice
+            when they won both competitions again in 1995–96, before retaining the league title once more in 1996–97
+            with a game to spare.
+            
+            In the 1998–99 season, Manchester United became the first team to win the Premier League, FA Cup and UEFA
+            Champions League – "The Treble" – in the same season.Losing 1–0 going into injury time in the 1999 UEFA
+            Champions League Final, Teddy Sheringham and Ole Gunnar Solskjær scored late goals to claim a dramatic
+            victory over Bayern Munich, in what is considered one of the greatest comebacks of all time.The club
+            then became the only British team to ever win the Intercontinental Cup after beating Palmeiras 1–0 in
+            Tokyo.Ferguson was subsequently knighted for his services to football.
+            <img src="../images/170px-Alex_Ferguson.jpg" alt="Apple" class="left" />
+            Manchester United won the league again in the 1999–2000 and 2000–01 seasons, becoming only the fourth club
+            to win the English title three times in a row. The team finished third in 2001–02, before regaining the
+            title in 2002–03.They won the 2003–04 FA Cup, beating Millwall 3–0 in the final at the Millennium
+            Stadium in Cardiff to lift the trophy for a record 11th time.In the 2005–06 season, Manchester United
+            failed to qualify for the knockout phase of the UEFA Champions League for the first time in over a
+            decade, but recovered to secure a second-place league finish and victory over Wigan Athletic in the 2006
+            Football League Cup Final. The club regained the Premier League in the 2006–07 season, before completing the
+            European double in 2007–08 with a 6–5 penalty shoot-out victory over Chelsea in the 2008 UEFA Champions
+            League Final in Moscow to go with their 17th English league title. Ryan Giggs made a record 759th appearance
+            for the club in that game, overtaking previous record holder Bobby Charlton.In December 2008, the club
+            became the first British team to win the FIFA Club World Cup and followed this with the 2008–09 Football
+            League Cup, and its third successive Premier League title.That summer, forward Cristiano Ronaldo
+            was sold to Real Madrid for a world record £80 million.In 2010, Manchester United defeated Aston Villa
+            2–1 at Wembley to retain the League Cup, its first successful defence of a knockout cup competition.
+            <img src="../images/170px-The_Champions_League_Winners_Medal_(Manchester_United_Museum)_(262769292).jpg" alt="Apple" class="right" />
+            After finishing as runner-up to Chelsea in the 2009–10 season, United achieved a record 19th league title in
+            2010–11, securing the championship with a 1–1 away draw against Blackburn Rovers on 14 May 2011.This
+            was extended to 20 league titles in 2012–13, securing the championship with a 3–0 home win against Aston
+            Villa on 22 April 2013.
+
+        </p><br>
+
+
+
+        <h2>2013– present</h2><br>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            On 8 May 2013, Ferguson announced that he was to retire as manager at the end of the football season, but
+            would remain at the club as a director and club ambassador.He retired as the most decorated manager
+            in football history.The club announced the next day that Everton manager David Moyes would replace
+            him from 1 July, having signed a six-year contract.Ryan Giggs took over as interim
+            player-manager 10 months later, on 22 April 2014, when Moyes was sacked after a poor season in which the
+            club failed to defend their Premier League title and failed to qualify for the UEFA Champions League for the
+            first time since 1995–96.They also failed to qualify for the Europa League, meaning that it was the
+            first time Manchester United had not qualified for a European competition since 1990.On 19 May 2014, it
+            was confirmed that Louis van Gaal would replace Moyes as Manchester United manager on a three-year deal,
+            with Giggs as his assistant.Malcolm Glazer, the patriarch of the Glazer family that owns the club, died
+            on 28 May 2014.<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+
+            Under Van Gaal, United won a 12th FA Cup, but a disappointing slump in the middle of his second season led
+            to rumours of the board sounding out potential replacements.Van Gaal was ultimately sacked just two
+            days after the cup final victory, with United having finished 5th in the league.Former FC Porto,
+            Chelsea, Inter Milan and Real Madrid manager José Mourinho was appointed in his place on 27 May 2016.
+            Mourinho signed a three-year contract, and in his first season won the FA Community Shield, EFL Cup and UEFA
+            Europa League. Wayne Rooney scored his 250th goal for United, a stoppage time equaliser in a league game
+            against Stoke City in January, surpassing Sir Bobby Charlton as the club's all-time top scorer.The
+            following season, United finished second in the league – their highest league placing since 2013 – but were
+            still 19 points behind rivals Manchester City. Mourinho also guided the club to a 19th FA Cup Final, but
+            they lost 1–0 to Chelsea. On 18 December 2018, with United in sixth place in the Premier League table, 19
+            points behind leaders Liverpool and 11 points outside the Champions League places, Mourinho was sacked after
+            144 games in charge. The following day, former United striker Ole Gunnar Solskjær was appointed as caretaker
+            manager until the end of the season.On 28 March 2019, following a run of 14 wins from his first 19
+            matches in charge, Solskjær was appointed permanent manager on a three-year deal.<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+            On April 18, 2021, Manchester United announced they were joining 11 other European clubs as founding members
+            of The European Super League, a proposed 20-team competition intended to rival the UEFA Champions
+            League.The announcement drew an unprecedented backlash from supporters, other clubs, media partners,
+            sponsors, players and the UK Government, forcing the club to withdraw just two days
+            later.The failure of the project led to the resignation of executive vice-chairman Ed
+            Woodward, while resultant protests against Woodward and the Glazer family led to a pitch invasion ahead of a
+            league match against Liverpool on May 2, 2021, which saw a Premier League game get postponed due to
+            supporter protests for the first time in the competition's history.<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+            On the pitch itself, United equalled the biggest win in Premier League history with a 9-0 win against
+            Southampton on February 2, 2021, but ended the season with defeat on penalties in the UEFA Europa League
+            Final against Villarreal, going four straight seasons without a trophy and one season away from equalling
+            their worst trophy drought since the club was last relegated.<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+
+            On 8 May 2013, Ferguson announced that he was to retire as manager at the end of the football season, but
+            would remain at the club as a director and club ambassador.He retired as the most decorated manager
+            in football history.The club announced the next day that Everton manager David Moyes would replace
+            him from 1 July, having signed a six-year contract.Ryan Giggs took over as interim
+            player-manager 10 months later, on 22 April 2014, when Moyes was sacked after a poor season in which the
+            club failed to defend their Premier League title and failed to qualify for the UEFA Champions League for the
+            first time since 1995–96.They also failed to qualify for the Europa League, meaning that it was the
+            first time Manchester United had not qualified for a European competition since 1990.On 19 May 2014, it
+            was confirmed that Louis van Gaal would replace Moyes as Manchester United manager on a three-year deal,
+            with Giggs as his assistant.Malcolm Glazer, the patriarch of the Glazer family that owns the club, died
+            on 28 May 2014.<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <img src="../images/170px-Ryan_Giggs_vs_Everton-5_cropped.jpg" alt="Apple" class="left" />
+            Under Van Gaal, United won a 12th FA Cup, but a disappointing slump in the middle of his second season led
+            to rumours of the board sounding out potential replacements.Van Gaal was ultimately sacked just two
+            days after the cup final victory, with United having finished 5th in the league.Former FC Porto,
+            Chelsea, Inter Milan and Real Madrid manager José Mourinho was appointed in his place on 27 May 2016.
+            Mourinho signed a three-year contract, and in his first season won the FA Community Shield, EFL Cup and UEFA
+            Europa League. Wayne Rooney scored his 250th goal for United, a stoppage time equaliser in a league game
+            against Stoke City in January, surpassing Sir Bobby Charlton as the club's all-time top scorer.The
+            following season, United finished second in the league – their highest league placing since 2013 – but were
+            still 19 points behind rivals Manchester City. Mourinho also guided the club to a 19th FA Cup Final, but
+            they lost 1–0 to Chelsea. On 18 December 2018, with United in sixth place in the Premier League table, 19
+            points behind leaders Liverpool and 11 points outside the Champions League places, Mourinho was sacked after
+            144 games in charge. The following day, former United striker Ole Gunnar Solskjær was appointed as caretaker
+            manager until the end of the season.On 28 March 2019, following a run of 14 wins from his first 19
+            matches in charge, Solskjær was appointed permanent manager on a three-year deal.
+
+            On April 18, 2021, Manchester United announced they were joining 11 other European clubs as founding members
+            of The European Super League, a proposed 20-team competition intended to rival the UEFA Champions
+            League.The announcement drew an unprecedented backlash from supporters, other clubs, media partners,
+            sponsors, players and the UK Government, forcing the club to withdraw just two days
+            later.The failure of the project led to the resignation of executive vice-chairman Ed
+            Woodward, while resultant protests against Woodward and the Glazer family led to a pitch invasion ahead of a
+            league match against Liverpool on May 2, 2021, which saw a Premier League game get postponed due to
+            supporter protests for the first time in the competition's history.
+
+            On the pitch itself, United equalled the biggest win in Premier League history with a 9-0 win against
+            Southampton on February 2, 2021, but ended the season with defeat on penalties in the UEFA Europa League
+            Final against Villarreal, going four straight seasons without a trophy and one season away from equalling
+            their worst trophy drought since the club was last relegated.
+        </p><br>
+
+        <h2>Crest and colours</h2><br>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            The club crest is derived from the Manchester City Council coat of arms, although all that remains of it on
+            the current crest is the ship in full sail.The devil stems from the club's nickname "The Red Devils";
+            it was included on club programmes and scarves in the 1960s, and incorporated into the club crest in 1970,
+            although the crest was not included on the chest of the shirt until 1971.
+
+            Newton Heath's uniform in 1879, four years before the club played its first competitive match, has been
+            documented as 'white with blue cord'. A photograph of the Newton Heath team, taken in 1892, is believed
+            to show the players wearing red-and-white quartered jerseys and navy blue knickerbockers.Between 1894
+            and 1896, the players wore green and gold jerseys which were replaced in 1896 by white shirts, which
+            were worn with navy blue shorts.
+            <img src="../images/150px-Manchester_United_Badge_1960s-1973.png" alt="Apple" class="right" />
+            Wikimedia Commons has media related to Manchester United F.C. kits.
+            After the name change in 1902, the club colours were changed to red shirts, white shorts, and black socks,
+            which has become the standard Manchester United home kit.Very few changes were made to the kit until
+            1922 when the club adopted white shirts bearing a deep red "V" around the neck, similar to the shirt worn in
+            the 1909 FA Cup Final. They remained part of their home kits until 1927.For a period in 1934, the
+            cherry and white hooped change shirt became the home colours, but the following season the red shirt was
+            recalled after the club's lowest ever league placing of 20th in the Second Division and the hooped shirt
+            dropped back to being the change.The black socks were changed to white from 1959 to 1965, where they
+            were replaced with red socks up until 1971 with white used on occasion, when the club reverted to black.
+            Black shorts and white socks are sometimes worn with the home strip, most often in away games, if there is a
+            clash with the opponent's kit. For 2018–19, black shorts and red socks became the primary choice for the
+            home kit.Since 1997–98, white socks have been the preferred choice for European games, which are
+            typically played on weeknights, to aid with player visibility.The current home kit is a red shirt with
+            the trademark Adidas three stripes in red on the shoulders, white shorts, and black socks.
+
+            The Manchester United away strip has often been a white shirt, black shorts and white socks, but there have
+            been several exceptions. These include an all-black strip with blue and gold trimmings between 1993 and
+            1995, the navy blue shirt with silver horizontal pinstripes worn during the 1999–2000 season, and the
+            2011–12 away kit, which had a royal blue body and sleeves with hoops made of small midnight navy blue and
+            black stripes, with black shorts and blue socks.An all-grey away kit worn during the 1995–96 season was
+            dropped after just five games; in its final outing against Southampton, Alex Ferguson instructed the team to
+            change into the third kit during half-time. The reason for dropping it being that the players claimed to
+            have trouble finding their teammates against the crowd, United failed to win a competitive game in the
+            kit.[99] In 2001, to celebrate 100 years as "Manchester United", a reversible white and gold away kit was
+            released, although the actual match day shirts were not reversible.
+
+            The club's third kit is often all-blue; this was most recently the case during the 2014–15 season.
+            Exceptions include a green-and-gold halved shirt worn between 1992 and 1994, a blue-and-white striped shirt
+            worn during the 1994–95 and 1995–96 seasons and once in 1996–97, an all-black kit worn during the
+            Treble-winning 1998–99 season, and a white shirt with black-and-red horizontal pinstripes worn between
+            2003–04 and 2005–06.From 2006–07 to 2013–14, the third kit was the previous season's away kit, albeit
+            updated with the new club sponsor in 2006–07 and 2010–11, apart from the 2008–09 season, when an all-blue
+            kit was launched to mark the 40th anniversary of the 1967–68 European Cup success.
+
+        </p><br>
+        <h2>Sponsorship</h2><br>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            In an initial five-year deal worth £500,000, Sharp Electronics became the club's first shirt sponsor at the
+            beginning of the 1982–83 season, a relationship that lasted until the end of the 1999–2000 season, when
+            Vodafone agreed a four-year, £30 million deal.Vodafone agreed to pay £36 million to extend the deal by
+            four years, but after two seasons triggered a break clause in order to concentrate on its sponsorship of the
+            Champions League.
+
+            To commence at the start of the 2006–07 season, American insurance corporation AIG agreed a four-year £56.5
+            million deal which in September 2006 became the most valuable in the world.At the beginning of
+            the 2010–11 season, American reinsurance company Aon became the club's principal sponsor in a four-year deal
+            reputed to be worth approximately £80 million, making it the most lucrative shirt sponsorship deal in
+            football history.Manchester United announced their first training kit sponsor in August 2011, agreeing
+            a four-year deal with DHL reported to be worth £40 million; it is believed to be the first instance of
+            training kit sponsorship in English football.The DHL contract lasted for over a year before the
+            club bought back the contract in October 2012, although they remained the club's official logistics
+            partner.The contract for the training kit sponsorship was then sold to Aon in April 2013 for a deal
+            worth £180 million over eight years, which also included purchasing the naming rights for the Trafford
+            Training Centre.
+
+            The club's first kit manufacturer was Umbro, until a five-year deal was agreed with Admiral Sportswear in
+            1975.Adidas received the contract in 1980,before Umbro started a second spell in 1992.
+            Umbro's sponsorship lasted for ten years, followed by Nike's record-breaking £302.9 million deal that lasted
+            until 2015; 3.8 million replica shirts were sold in the first 22 months with the company.In
+            addition to Nike and Chevrolet, the club also has several lower-level "platinum" sponsors, including Aon and
+            Budweiser.
+
+            On 30 July 2012, United signed a seven-year deal with American automotive corporation General Motors, which
+            replaced Aon as the shirt sponsor from the 2014–15 season. The new $80m-a-year shirt deal is worth $559m
+            over seven years and features the logo of General Motors brand Chevrolet.Nike announced that they
+            would not renew their kit supply deal with Manchester United after the 2014–15 season, citing rising
+            costs.Since the start of the 2015–16 season, Adidas has manufactured Manchester United's kit as
+            part of a world-record 10-year deal worth a minimum of £750 million.Plumbing products
+            manufacturer Kohler became the club's first sleeve sponsor ahead of the 2018–19 season.Manchester
+            United and General Motors did not renew their sponsorship deal, and the club subsequently signed a
+            five-year, £235m sponsorship deal with TeamViewer ahead of the 2021–22 season.
+
+        </p><br>
+        <h2>Support</h2><br>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            Manchester United is one of the most popular football clubs in the world, with one of the highest average
+            home attendances in Europe.The club states that its worldwide fan base includes more than 200
+            officially recognised branches of the Manchester United Supporters Club (MUSC), in at least 24
+            countries.The club takes advantage of this support through its worldwide summer tours. Accountancy
+            firm and sports industry consultants Deloitte estimate that Manchester United has 75 million fans
+            worldwide.The club has the third highest social media following in the world among sports teams (after
+            Barcelona and Real Madrid), with over 72 million Facebook followers as of July 2020.A 2014 study
+            showed that Manchester United had the loudest fans in the Premier League.
+            <img src="../images/220px-Oldtraffordaverageattendances.png" alt="Apple" class="right" />
+            Supporters are represented by two independent bodies; the Independent Manchester United Supporters'
+            Association (IMUSA), which maintains close links to the club through the MUFC Fans Forum,and the
+            Manchester United Supporters' Trust (MUST). After the Glazer family's takeover in 2005, a group of fans
+            formed a splinter club, F.C. United of Manchester. The West Stand of Old Trafford – the "Stretford End" – is
+            the home end and the traditional source of the club's most vocal support.
+        </p><br>
+    </div>
+    <br><br><br><br><br>
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Sites</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="players.html">Players</a></li>
+                    <li><a href="fixtures.html">fixtures</a></li>
+                    <li><a href="ticket.html">Tickets</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="history.html">About</a></li>
+                  </ul>
+            </div>
+           <img class="imageLogo" src="../images/logo.jpg" width="200px" height="200px">
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://lk.linkedin.com/"><i class="fab fa-linkedin-in"></i></a><br>
+        <a href="https://www.facebook.com/"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.twitter.com/"><i class="fab fa-snapchat"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-twitch"></i></a>
+                    <a href="https://lk.linkedin.com/"><i class="fab fa-tiktok"></i></a><br>
+        <a href="https://www.facebook.com/"><i class="fab fa-skype"></i></a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <p class="copiright">Copyright : 2021 Manchester United F.C</p>
+</footer>
+</body>
+
+</html>

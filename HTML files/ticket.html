@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" type="logo" href="../images/manutd.png">
+    <title>Tickets | Manchester Utd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url("../images/wal.JPEG");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+
+        nav {
+            height: 80px;
+            width: 100%;
+            position: fixed;
+
+        }
+
+        label.logo {
+            color: red;
+            font-size: 35px;
+            line-height: 80px;
+            padding: 0 50px;
+            font-weight: bold;
+        }
+
+        label.logo span {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-size: 20px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        a.active,
+        a:hover {
+            color: red;
+            transition: .5s;
+        }
+
+        .checkbtn {
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        @media (max-width: 952px) {
+            label.logo {
+                font-size: 30px;
+                padding-left: 50px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+
+        @media (max-width: 858px) {
+            .checkbtn {
+                display: block;
+            }
+
+            ul {
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #023b7556;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+
+            nav ul li a {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            a.active,
+            a:hover {
+                background: none;
+                color: red;
+            }
+
+            #check:checked~ul {
+                left: 0;
+            }
+        }
+
+        #frm {
+            background-image: url("../images/42mm-Height-Cross-Shape-Artificial-Grass-for-Football-Field.jpg");
+            height: 480px;
+            width: 804px;
+            margin-left: 370px;
+            border-radius: 10px;
+        }
+
+        .frpm {
+            margin-left: 20px;
+
+        }
+
+        .ticket input[type=text],
+        .ticket input[type=email],
+        .ticket input[type=tel] {
+            width: 95%;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            background-color: rgb(200, 245, 155);
+        }
+
+        #entry {
+            text-transform: capitalize;
+            margin: 10px 0px 0px 600px;
+            color: black;
+            background-color: rgb(200, 245, 155);
+            padding: 3px 10px;
+            border: 3px solid black;
+
+        }
+
+        #entry:hover {
+            color: #fff;
+            background-color: rgb(28, 53, 3);
+            border: 3px solid black;
+            cursor: pointer;
+        }
+
+        #reset {
+            text-transform: capitalize;
+            color: black;
+            background-color: rgb(200, 245, 155);
+            padding: 3px 10px;
+            margin: px 0px 0px 680px;
+            border: 3px solid black;
+            cursor: pointer;
+
+        }
+
+        #reset:hover {
+            color: #fff;
+            background-color: rgb(28, 53, 3);
+            border: 3px solid black;
+            cursor: pointer;
+        }
+
+
+
+        #Course {
+            border-radius: 10px;
+            padding: 10px;
+            width: 95%;
+            font-weight: bold;
+            background-color: rgb(200, 245, 155);
+        }
+
+        table {
+            display: none;
+            border-collapse: collapse;
+            width: 95%;
+            background-color: rgb(200, 245, 155);
+
+            margin-left: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            width: 95%;
+            padding: 5px;
+            text-align: center;
+        }
+
+        #nex{
+            display: none;
+            text-transform: capitalize;
+            color: black;
+            background-color: rgb(200, 245, 155);
+            padding: 3px 10px;
+            border: 3px solid black;
+            margin: 10px 0px 0px 610px;
+            cursor: pointer;
+        }
+        #ho{
+            display: none;
+            text-transform: capitalize;
+            color: black;
+            background-color: rgb(200, 245, 155);
+            padding: 3px 10px;
+            border: 3px solid black;
+            margin: -28px 0px 0px 670px;
+            cursor: pointer;
+        }
+        #ppk {
+            display: none;
+            text-transform: capitalize;
+            color: black;
+            background-color: rgb(200, 245, 155);
+            padding: 3px 10px;
+            border: 3px solid black;
+            margin: 100px 0px 0px 700px;
+            cursor: pointer;
+
+
+        }
+
+        #nex:hover,
+        #ho:hover,
+        #ppk:hover {
+            color: #fff;
+            background-color: rgb(28, 53, 3);
+            border: 3px solid black;
+            cursor: pointer;
+        }
+
+        .radioClass {
+            display: none;
+            font-weight: bold;
+        }
+
+        #radio {
+            margin-left: 150px;
+
+        }
+
+        .three {
+            display: none;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  background-image: url("../images/backl.jpg");
+  
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+  padding: 30px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: black;
+  height: 3px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.footer-col ul li a {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <label class="logo">MAN-<span>UTD</span></label>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="players.html">Players</a></li>
+            <li><a href="fixtures.html">fixtures</a></li>
+            <li><a class="active" href="ticket.html">Tickets</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="history.html">About</a></li>
+          </ul>
+    </nav>
+    <div class="bb" style="padding-top: 150px;">
+
+    </div>
+    <form id="frm" name="ssd" class="ticket">
+        <div class="frpm" id="pp"><br>
+            <h2 style="text-decoration: underline; color: black;"><b>BOOK YOUR TICKET</b></h2><br>
+            <label for="name"><b>Name :</label><br>
+            <input type="text" placeholder="Enter your name here" id="name"><br><br>
+
+            <label for="email">Email Address :</label>
+            <input type="text" placeholder="Enter your email here" id="email"><br><br>
+
+            <label for="tel" id="phone">Telephone Number :</label>
+            <input type="tel" placeholder="Enter your phone number " id="tele"><br><br>
+
+            <p>Choose the match here that you need to watch</p><br>
+            <label for="topping">Match:</b></label><br>
+            <select style="color: rgb(105, 99, 99);" name="topping" id="Course" required>
+                <option value="">Man-Utd vs Brentford |24th JUL 21-.30pm</option>
+                <option value="">Man-Utd vs QPR       |30th JUL 2021-22.30pm</option>
+                <option value="">Man-Utd vs Evorton   |07th AUG 2021-21.30pm</option>
+                <option value="">Man-Utd vs Leed-Utd  |14th AUG 2021-22.30pm</option>
+                <option value="">Man-Utd vs Southampton |22nd AUG 2021-20.30pm</option>
+                <option value="">Man-Utd vs Wolves    |29th AUG 2021-21.30pm</option>
+                <option value="">Man-Utd vs Newcastle |11th SEP 2021-19.30pm</option>
+                <option value="">Man-Utd vs Young Boys |14th SEP 2021-22.15pm</option>
+                <option value="">Man-Utd vs West Ham |19th SEP 2021-18.30pm</option>
+                <option value="">Man-Utd vs West Ham |21st SEP 2021-TBD</option>
+                <option value="">Man-Utd vs Aston Villa |25th SEP 2021-19.30pm</option>
+                <option value="">Man-Utd vs Villareal |30th SEP 2021-00.30am</option>
+                <option value="">Man-Utd vs Everton |02nd OCT 2021-17.30pm</option>
+                <option value="">Man-Utd vs Leicester City |16th OCT 2021-19.30pm</option>
+                <option value="">Man-Utd vs Atalanta |21st OCT 2021-00.30am</option>
+                <option value="">Man-Utd vs Liverpool |24th OCT 2021-21.00pm</option>
+                <option value="">Man-Utd vs Tottenham |30th OCT 2021-22.00pm</option>
+                <option value="">Man-Utd vs Atalanta |03rd NOV 2021-01.30am</option>
+                <option value="">Man-Utd vs Man City |06th NOV 2021-20.30pm</option>
+                <option value="">Man-Utd vs Watford |20th NOV 2021-20.30pm</option>
+                <option value="">Man-Utd vs Villareal |23rd NOV 2021-23.15am</option>
+                <option value="">Man-Utd vs Chelsea |27th NOV 2021-20.30pm</option>
+                <option value="">Man-Utd vs Arsenal |01st DEC 2021-01.30am</option>
+                <option value="">Man-Utd vs Cristal Palace |04th DEC 2021-20.30pm</option>
+                <option value="">Man-Utd vs Young Boys |09th DEC 2021-01.30am</option>
+                <option value="">Man-Utd vs Norwich City |11th DEC 2021-20.30pm</option>
+                <option value="">Man-Utd vs Brentford |15th DEC 2021-01.15am</option>
+                <option value="">Man-Utd vs Brighton |18th DEC 2021-20.30pm</option>
+                <option value="">Man-Utd vs Newcastle |26th DEC 2021-20.30pm</option>
+                <option value="">Man-Utd vs Burnley |28th DEC 2021-20.30pm</option>
+                <option value="">Man-Utd vs Wolves |01st JAN 2021-20.30pm</option>
+                <option value="">Man-Utd vs Aston Villa |15th DEC 2021-20.30pm</option>
+                <option value="">Man-Utd vs westham |22rd JAN 2021-20.30pm</option>
+
+
+
+            </select><br><br>
+
+            <input type="button" id="entry" onclick="displayDetails()" value="next" />
+            <button type="reset" id="reset" class="clear">clear</button>
+
+        </div>
+
+        <table id="display"><br>
+            <tr>
+                <th>Tickets</th>
+                <th>Adults</th>
+                <th>Children</th>
+
+            </tr>
+            <tr>
+                <td>VIP</td>
+                <td>$8000</td>
+                <td>$6000</td>
+            <tr>
+                <td>High</td>
+                <td>$5000</td>
+                <td>$4000</td>
+
+
+            </tr>
+            <tr>
+                <td>Medium</td>
+                <td>$2000</td>
+                <td>$1000</td>
+            </tr>
+            <tr>
+                <td>Low</td>
+                <td>$800</td>
+                <td>$500</td>
+            </tr>
+            </tr>
+        </table>
+        <br>
+
+        <div class="radioClass" id="rad">
+
+            <label style="padding-left: 10px;" for="subject">Choose the ticket you prefer :<br></label>
+            <input type="radio" style=" margin-top: 20px;" id="radio" value="Delivery"
+                name="subject">&nbsp;&nbsp;VIP Adult<br>
+            <input type="radio" id="radio" value="VIP" name="subject">&nbsp;&nbsp;VIP Children<br>
+            <input type="radio" id="radio" value="VIP" name="subject">&nbsp;&nbsp;High Adult<br>
+            <input type="radio" id="radio" value="HIGH" name="subject">&nbsp;&nbsp;High Children<br>
+            <input type="radio" id="radio" value="HIGH" name="subject">&nbsp;&nbsp;Medium Adult<br>
+            <input type="radio" id="radio" value="MED" name="subject">&nbsp;&nbsp;Medium Children<br>
+            <input type="radio" id="radio" value="MED" name="subject">&nbsp;&nbsp;Medium Adult<br>
+            <input type="radio" id="radio" value="LOW" name="subject">&nbsp;&nbsp;Low Adult<br>
+            <input type="radio" id="radio" value="LOW" name="subject">&nbsp;&nbsp;Low Children<br>
+        
+        </div>
+
+
+
+        <input type="button" id="nex" onclick="displayDetail()" value="Next" />
+        <button type="button" id="ho" onclick="show()" class="oo">Back</button>
+        <div class="three" id="tre" style="background-color: rgba(127, 255, 212, 0.507);">
+            <p style="font-size: 20px; padding-left: 10px; padding-top: 80px; font-weight: bold;">Hello Sir/Madam,</p><br><br>
+            <p style="font-weight: bold; font-size: 20px;padding-left:5px ;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sorry still the tickets are not available.So We will send a message to your
+               mail about the payment details</p>
+            <br><br><br>
+            <p style="padding-left: 10px;font-size: 20px;font-weight: bold;">Thanks & Regards
+            </p>
+            <button type="button" id="ppk" onClick="window.location.reload();">Finish</button>
+        </div>
+
+
+    </form><br><br><br><br><br><br>
+    
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Sites</h4>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="players.html">Players</a></li>
+                    <li><a href="fixtures.html">fixtures</a></li>
+                    <li><a href="ticket.html">Tickets</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="history.html">About</a></li>
+                  </ul>
+            </div>
+            <img style="margin-top: 30px; margin-left: 180px; margin-right: 200px;"  src="../images/logo.jpg" width="200px" height="200px">
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://lk.linkedin.com/"><i class="fab fa-linkedin-in"></i></a><br>
+        <a href="https://www.facebook.com/"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.twitter.com/"><i class="fab fa-snapchat"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-twitch"></i></a>
+                    <a href="https://lk.linkedin.com/"><i class="fab fa-tiktok"></i></a><br>
+        <a href="https://www.facebook.com/"><i class="fab fa-skype"></i></a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <p style="margin-left: 610px; color: #fff; margin-top: 10px;">Copyright : 2021 Manchester United F.C</p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function displayDetails() {
+            var name = document.forms["ssd"]["name"].value;
+            var email = document.forms["ssd"]["email"].value;
+            var telephone = document.forms["ssd"]["tele"].value;
+
+            var valid_name_letters = /^[a-zA-Z-'. ]+$/;
+            var valid_email_letters = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var valid_telephone_numbers = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+            if (name == "") {
+                alert("Enter your name!");
+                return false;
+            }
+            else if (!(name.match(valid_name_letters))) {
+                alert('Please Enter your Correct name!');
+                return false;
+            }
+            if (email == "") {
+                alert(" Enter your email address");
+                return false;
+            }
+            else if (!(email.match(valid_email_letters))) {
+                alert('Your Email is not valid!! Please Enter a valid email address');
+                return false;
+            }
+            if (telephone == "") {
+                alert(" Enter your phone number");
+                return false;
+            }
+            else if (!(telephone.match(valid_telephone_numbers))) {
+                alert('Your telephone number is  not valid!! Please Enter a valid  telephone number');
+                return false;
+            }
+
+            else {
+
+                document.getElementById("pp").style.display = "none";
+                document.getElementById("display").style.display = "block";
+                document.getElementById("ho").style.display = "block";
+                document.getElementById("nex").style.display = "block";
+                document.getElementById("rad").style.display = "block";
+                document.getElementById("ppk").style.display = "none";
+
+                document.getElementById("tre").style.display = "none";
+                document.getElementById("reset").style.display = "block";
+
+
+            }
+
+
+        }
+        function show() {
+            document.getElementById("pp").style.display = "block";
+            document.getElementById("display").style.display = "none";
+            document.getElementById("rad").style.display = "none";
+            document.getElementById("ho").style.display = "none";
+            document.getElementById("nex").style.display = "none";
+            document.getElementById("ppk").style.display = "block";
+        }
+        function displayDetail() {
+            var subject = document.forms["ssd"]["subject"].value;
+            if (subject == "") {
+                alert("Add a subject!");
+                return false;
+            }
+            else {
+                document.getElementById("pp").style.display = "none";
+                document.getElementById("display").style.display = "none";
+                document.getElementById("ho").style.display = "none";
+                document.getElementById("nex").style.display = "none";
+                document.getElementById("rad").style.display = "none";
+                document.getElementById("tre").style.display = "block";
+                document.getElementById("ppk").style.display = "block";
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
